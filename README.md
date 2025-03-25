@@ -1,0 +1,2 @@
+# mywebsite
+small excercises
