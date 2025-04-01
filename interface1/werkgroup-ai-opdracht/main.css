@@ -1,0 +1,32 @@
+.a4{
+    position:relative;
+    border:1px solid #EEEEEE;
+    width:100%;
+}
+.query{
+    display:inline-block;
+    border:1px solid grey;
+    margin:4px;
+    padding:10px;
+    font-size:1.5em;
+    width:400px;
+}
+.square{
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid grey;
+    width:200px;
+    height:200px;
+    font-size:1.5em;
+}
+p{
+    color:#555555;
+    font-weight:700;
+}
+.disclaimer{
+    font-size: .7em;
+    color:#DDDDDD;
+    bottom:2px;
+    left:2px;
+}
