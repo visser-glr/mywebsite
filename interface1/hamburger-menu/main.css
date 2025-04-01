@@ -1,0 +1,54 @@
+*{
+    box-sizing:border-box;
+}
+
+.hamburger{
+    position:relative;
+    cursor:pointer;
+}
+.dt-menu{
+    flex:1;
+    text-align: right;
+    border:1px solid red;
+}
+.icon{
+    width:50px;
+    height:50px;
+    position:relative;
+    top:0;
+    left:0;
+
+}
+
+#icon-bars{
+    opacity:1;
+    transform:rotate(0deg) scale(1);
+    transition:all .15s ease-in-out;
+}
+#icon-xmark{
+    opacity:0;
+    transform:rotate(360deg) scale(0);
+    transition:all .15s ease-in-out;
+    position:absolute;
+}
+
+
+.opened #icon-bars{
+    opacity:0;
+    transform:rotate(360deg) scale(0);
+}
+.opened #icon-xmark{
+    opacity:1;
+    transform:rotate(0deg) scale(1);
+}
+
+.my-flex{
+    display:flex;
+    align-items: center;
+}
+
+li{
+    display:inline-block;
+    padding-right:10px;
+    font-size:2em;
+}

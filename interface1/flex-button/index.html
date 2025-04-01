@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script defer src="main.js"></script>
+        <style>
+            html, body{
+                margin:0;
+                padding:0;
+            }
+            #container{
+                border:1px solid red;
+                display:flex;
+                flex-direction:row;
+                align-items:center;
+            }
+            #image{
+                width:50px;
+                height:50px;
+                
+                border:1px solid red;
+            }
+            #text{
+                flex:1;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                padding-left:5px;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <div id="container">
+            <img id="image" src="https://placehold.co/300x300">
+            <div id="text">this is a ridiculouslyridiculouslargyridridiculouslyridiculouslargyridiculouslargeridiculous large text.</div>
+        </div>
+    </body>
+</html>

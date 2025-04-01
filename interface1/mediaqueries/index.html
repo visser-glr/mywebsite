@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <style>
+            .mobile, .tablet, .desktop{
+                display:none;
+            }
+
+            /* mobile */
+            @media screen and (max-width:576px){
+                body{
+                    background-color:#00ff2a;
+                }
+                .mobile{
+                    display:block;
+                }
+            }
+
+            /* tablet */
+            @media screen and (min-width:577px) and (max-width:768px){
+                body{
+                    background-color:#d9ff02;
+                }
+                .tablet{
+                    display:block;
+                }
+    
+            }
+
+            /* and above */
+            @media screen and (min-width:768px){
+                body{
+                    background-color:#ff9102;
+                }
+                .desktop{
+                    display:block;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        
+       <h1 class="mobile">mobile: @media screen and (max-width:576px)</h1>
+       <h1 class="tablet">tablet: @media screen and (min-width:577px) and (max-width:768px)</h1>
+       <h1 class="desktop">desktop: @media screen and (min-width:768px)</h1>
+    </body>
+</html>

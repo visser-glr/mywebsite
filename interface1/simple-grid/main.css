@@ -1,0 +1,43 @@
+
+*{
+    box-sizing: border-box;
+}
+body, html{
+    font-family:sans-serif;
+}
+
+.container{
+    border:1px solid green;
+    background-color:#EEEEEE;
+    transition: all .125s ease-in-out;
+}
+.cell{
+    border:1px solid red;
+    display:flex;
+    justify-content: center;
+    transition: all .125s ease-in-out;
+}
+.m-4{
+    margin:4px;
+    font-size:1.5em;
+    font-weight:400;
+}
+
+#desktop{
+    display:none;
+    color:#FF0000;
+}
+
+
+
+@media screen and (min-width:720px){
+    .container{
+        background-color:#BBBB99;
+    }
+    #desktop{
+        display:block;
+    }
+    #mobiel{
+        display:none;
+    }
+}
