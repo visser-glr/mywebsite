@@ -1,28 +1,76 @@
-::backdrop {
-    background-color:#000000;
-    opacity: 0.25;
+body{
+  font-family: sans-serif;
 }
+
+dialog::backdrop {
+  background-color:#000000;
+  
+  animation: fadeout .25s forwards;	
+}
+
+dialog[open]::backdrop{
+ 
+  animation: fadein .25s ease-in forwards;
+}
+
 button{
     border:1px solid black;
     background-color:transparent;
     border-radius:4px;
     padding:4px 10px;
+    
 }
 
 dialog{
+  transition:
+    display 1s allow-discrete,
+    overlay 1s allow-discrete;
+
     border:2px solid #555555;
     border-radius:4px;
     padding:10px 10px;
+    animation: dialogout .25s forwards;	
 }
 dialog[open]{
-  animation: fadein .25s ease-in forwards;
+  animation: dialogin .25s ease-in forwards;
 }
 
 @keyframes fadein{
-    0%{
+    from{ 
       opacity:0;
     }
-    100%{
-      opacity:1;
+    to{
+      opacity:.25;
     }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: .25;
   }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes dialogin{
+  from{ 
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0px);
+  }
+}
+
+@keyframes dialogout {
+from {
+  opacity: 1;
+  transform:translateY(0px);
+}
+to {
+  opacity: 0;
+  transform:translateY(20px);
+}
+}
