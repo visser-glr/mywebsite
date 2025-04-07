@@ -44,13 +44,3 @@ p{
     height:30px;
     border-radius:1em;
 }
-
-.red{
-    background-color:rgb(181, 0, 0);
-}
-.green{
-    background-color:rgb(3, 135, 1);
-}
-.orange{
-    background-color:rgb(204, 105, 0);
-}
