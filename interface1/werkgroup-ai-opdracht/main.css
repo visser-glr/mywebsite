@@ -1,3 +1,7 @@
+html, body{
+    font-family: sans-serif;
+}
+
 .a4{
     position:relative;
     border:1px solid #EEEEEE;
@@ -29,4 +33,24 @@ p{
     color:#DDDDDD;
     bottom:2px;
     left:2px;
+}
+.round{
+    display:inline-flex;
+    background-color:#333333;
+    color:#EEEEEE;
+    justify-content: center;
+    align-items:center;
+    width:30px;
+    height:30px;
+    border-radius:1em;
+}
+
+.red{
+    background-color:rgb(181, 0, 0);
+}
+.green{
+    background-color:rgb(3, 135, 1);
+}
+.orange{
+    background-color:rgb(204, 105, 0);
 }
