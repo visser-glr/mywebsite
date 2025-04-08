@@ -1,6 +1,6 @@
 <?php
 
-Dit is een test in php.
+echo "Dit is een test in php.";
 
 
 
