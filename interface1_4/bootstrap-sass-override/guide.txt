@@ -1,0 +1,46 @@
+############ NPM USE #############
+# bootstrap met npm gebruiken
+
+# create directory, or with the  finder "new folder"
+$ mkdir <dir>
+
+# cd in directory, cd and drag folder into terminal for location
+$ cd <dir>
+
+# maak package.js met standaard waarden
+$ npm init -y
+
+# installeer bootstrap module@versie
+$ npm install bootstrap@5.3.6
+
+# add js & css links from node_modules folder in index.html (bootstrap & eventueel @popperjs)
+# zie : index.html
+# in case of commit, de node_modules folder is niet nodig te committen. Deze kan opnieuw worden
+# gegenereerd dmv "npm install" in combinatie met package.json
+
+
+########### SASS OVERRIDE ###########
+
+# vs code install -> live sass compiler
+# vs code ga naar preferences -> settings en vul verander de settings.formats naar:
+"liveSassCompile.settings.formats": [
+
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/css",
+        }
+    ],
+
+# create folder "css" in root. hier wordt straks de gecompileerde minified css gesaved als "main.min.css"
+# create folder "scss" in de root.
+# maak een nieuwe file "main.scss" in deze directory. Hierin importeren we bootstrap.scss (een sass file)
+
+# belangrijk! Open de project folder in vsc zodat de sass compiler weet wat de "root" is.
+# selecteer de main.scss file en druk in vs code in de onderste balk op "watch" en save de file.
+# de scss wordt nu gecompileerd naar de css folder.
+# de nieuwe css link je nu in de html file.
+# done.
+
+# Je kunt in de bootstrap node module eens rondneuzen in de scss folder om de verschillende variabelen te bekijken welke je kunt overriden
+

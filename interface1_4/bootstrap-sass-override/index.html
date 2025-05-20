@@ -1,40 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-       
-        <!-- bootstrap laden vanaf eigen directory, gebruik niet beide scenario's natuurlijk.-->
-        <link href="./css/bootstrap-override.min.css" rel="stylesheet">
-        <script defer src="./js/bootstrap.bundle.min.js"></script>
         
+        <link rel="stylesheet" href="css/main.min.css">
+        <script defer="" src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- popper js for bootstrap popups  and stuff-->
+        <script defer="" src="node_modules/@popperjs/core/dist/cjs/popper.js"></script>
     </head>
     <body>
-      
-      <div>VsStudioCode-> install extension: live sass compile</div>
-      <div>Ga naar settings: zoek op "sass" en pas de compile settings aan. Zorg hierbij dat je vanuit een project folder werkt. Anders kan de extensie de root niet bepalen.</div>
-      <div>Je kunt nu "watch sass" onderaan aanzetten. Bij verandering wordt er nu automatisch gecompileerd.</div>
-      <pre>
-        {
-            "format": "compressed",
-            "extensionName": ".min.css",
-            "savePath": "/css",
-        }
-      </pre>
 
-      <hr>
-      <div>
-        We gaan de primary color waarde overschrijven (zie _variables.scss):
-        <pre>$primary:       $blue !default;</pre>
-        !default geeft aan: Is er al een waarde opgegeven gebruik die waarde dan voor deze variabele. Zo niet, gebruik dan blauw.
-      </div>
-
-
+      <!-- button met primary class van bootstrap.. -->
+      <div>origineel is btn-primary blauw. met de aanpassing is deze oranje.</div>
       <button type="button" class="btn btn-primary">Primary</button>
-      
-      <div>Gelukt!</div>
-      
-      <hr>
-      <div>Je kunt uiteraard ook simpelweg de klasse van de css file overschrijven in een standaard css file zonder gebruik te maken van sass compilatie. Bij grote projecten is het nadeel dat dit minder overzichtelijk is uiteindelijk.</div>
-        
+
     </body>
 </html>

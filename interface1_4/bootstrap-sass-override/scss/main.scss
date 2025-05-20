@@ -1,0 +1,7 @@
+ 
+  // overriding primary color.
+  // must come first! (because of !default)
+ $primary: orange;
+
+ // import bootstrap sass
+ @import '../node_modules/bootstrap/scss/bootstrap.scss';
