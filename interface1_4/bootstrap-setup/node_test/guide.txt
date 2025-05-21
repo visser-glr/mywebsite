@@ -13,8 +13,8 @@ npm init -y
 npm install bootstrap@5.3.6
 
 # add js & css links from node_modules folder in index.html (bootstrap & eventueel @popperjs)
-# zie : index.html
-# in case of commit, de node_modules folder is net nodig te committen. Deze kan opnieuw worden
+# zie : load-node.html
+# in case of commit, de node_modules folder is niet nodig te committen. Deze kan opnieuw worden
 # gegenereerd dmv "npm install" in combinatie met package.json
 
 
