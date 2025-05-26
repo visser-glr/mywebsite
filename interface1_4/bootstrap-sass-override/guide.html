@@ -1,0 +1,71 @@
+<html>
+
+<head>
+     <link href="/_object.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2>Bootstrap met npm</h2>
+    <ul>
+        <li>Maak een nieuwe folder aan.</li>
+        <li class="cmd">$ cd [folder name]</li>
+        <li>npm package initialiseren</li>
+        <li class="cmd">$ npm init -y</li>
+        <li>bootstrap installeren (@specifieke versie)</li>
+        <li class="cmd">$ npm install bootstrap@5.3.6</li>
+        <li>css en js files linken in index.html</li>
+    </ul>
+    <div><i>
+            github commit? De node_modules folder is niet nodig te committen. Deze kan opnieuw worden
+            gegenereerd dmv "npm install" in combinatie met package.json
+        </i></div>
+
+
+    <h2>Bootstrap css override</h2>
+    
+    <h3> SASS (Syntactic Awesome StyleSheets). of gewoon css?</h3>
+    <div><i>
+        Sass is een manier om makkelijker css te schrijven omdat je o.a. objecten kunt 'nesten'. makkelijker variabelen kunt gebruiken etc.
+        Het nadeel is dat het gecompileerd moet worden naar css.
+    </i></div>
+
+    <h3>Sass installeren</h3>
+    <ul>
+        <li>vs code install -> live sass compiler</li>
+        <li>vs code: ga naar preferences -> settings en vul verander de settings.formats naar:</li>
+    </ul>
+    <div class="cmd"><pre><i>
+        "liveSassCompile.settings.formats": [   
+
+            {
+                "format": "compressed",
+                "extensionName": ".min.css",
+                "savePath": "/css",
+            }
+        ],
+        </i></pre></div>
+
+
+    <h3>Bootstrap sass override & compileren.</h3>
+    <ul>
+        <li>Create folder "css" in root. hier wordt straks de gecompileerde minified css gesaved als "main.min.css"</li>
+        <li>Create folder "scss" in de root.</li>
+        <li>Maak een nieuwe file "main.scss" in de scss directory. Hierin importeren we bootstrap.scss (een sass file)</li>
+        <li>In deze file kunnen we ook variabelen overschrijven. (zie main.scss file)</li>
+        <li>selecteer de main.scss file en druk in vs code in de onderste balk op "watch" en save de file.</li>
+        <li>de scss wordt nu gecompileerd naar de css folder.</li>
+        <li>de nieuwe css file (main.min.css) link je nu in de index.html file.</li>
+    </ul>
+
+    <div><i>
+            Belangrijk! Open de project folder in vsc zodat de sass compiler weet wat de "root" is.
+            Je kunt in de bootstrap node module eens rondneuzen in de scss folder om de verschillende variabelen te
+            bekijken welke je kunt overriden.
+            <br><br>
+            Je kunt uiteraard ook gewoon een css file aanmaken die je later inlaadt dan de bootstrap css file. Hierin kun je dan de gewenste klasse 
+            overchrijven zonder sass.
+        </i></div>
+
+</body>
+
+</html>

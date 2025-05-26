@@ -1,0 +1,12 @@
+/* object */
+*{
+  font-family: sans-serif;
+}
+
+.cmd{
+    background-color:#333333;
+    color:#FFFFFF;
+    display:inline-block;
+    padding:5px;
+    border-radius:4px;
+}
