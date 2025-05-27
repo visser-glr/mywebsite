@@ -1,0 +1,15 @@
+
+:root {
+  --bs-primary: orange;
+  --bs-primary-active: rgb(146, 106, 30);
+}
+
+.btn-primary{
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-primary:hover{
+    background-color: var(--bs-primary-active);
+    border-color: var(--bs-primary-active);
+}
