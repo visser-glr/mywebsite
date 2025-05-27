@@ -2,7 +2,10 @@ window.onload=function(){
 
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext("2d");
-let offset_x = 0;
+let offset_r = 0;
+let offset_g = Math.PI/10;
+let offset_b = Math.PI/20;
+
 let offset_y = 0;
 let offset_z = 0;
 let offset_amp = 0;
@@ -44,12 +47,13 @@ function loop(){
        
     })
 
-    offset_x += Math.PI / 4350;
-    offset_y += Math.PI / 4200;
-    offset_z += Math.PI / 2500;
-
+    offset_r += Math.PI / 150;
+    offset_g += Math.PI / 250;
+    offset_b += Math.PI / 450;
+    offset_y += Math.PI / 1200;
+    
     offset_amp += Math.PI / 2600;
-    offset_namp += Math.PI / 2200;
+    
     
     let step = ((Math.PI * 2) / circle_size);
     
@@ -63,18 +67,24 @@ function loop(){
         let x = i % size;
         let y = Math.floor(i/size);
 
-        let n_amp= 6*Math.sin(offset_namp)
-        let s_amp = 6*Math.sin(offset_amp)*n_amp;
+
+
+
+        //let n_amp= 6*Math.sin(offset_namp)
+        let s_amp = 2*Math.sin(offset_amp+(step * x/2))*2;
         // contoleer amplitude over y
-        let sy = .50 + (Math.sin(offset_y + (step * y)+s_amp));
+        let ampY = .50 + (Math.sin(offset_y+(step * y)*s_amp));
         // controleer x
-        let sx =  (.50 + ((Math.cos(offset_x+(step * x)+sy))));
+        let sr =  (.50 + ((Math.cos(offset_r+(step * x)+ampY))));
         
-        let sz = (.50 + ((Math.cos(offset_z+(step * y)+sx+n_amp))));
+        let sg =  (.50 + ((Math.cos(offset_g+(step * y)*ampY))));
+
+        let sb =  (.50 + ((Math.cos(offset_b+(step * y)+ampY))));
+        //let sz = (.50 + ((Math.cos(offset_z+(step * y)+sx+n_amp))));
         //let brightness = sx;
         //console.log(brightness)
 
-        ctx.fillStyle = `rgba(${sy*255}, ${sx*255},${sz*255})`;
+        ctx.fillStyle = `rgba(${sr*255}, ${sg*255},${sb*255})`;
         ctx.fillRect(x, y, 1, 1);
         //led.plotBrightness(x, y, brightness);
         
