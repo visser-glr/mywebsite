@@ -1,0 +1,7 @@
+/*
+Dit is alles wat we nodig hebben om op voort te bouwen
+de geimporteerde css wordt gebruikt om de nodige tailwind klassen
+van de html files naar de output te kopieeren.
+De output.css wordt vervolgens gelinked in de index.html
+*/
+@import "tailwindcss";

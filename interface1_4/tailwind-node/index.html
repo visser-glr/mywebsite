@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/_object.css" rel="stylesheet">
+  <link href="src/output.css" rel="stylesheet">
+</head>
+<body>
+  <h1 class="p-6 border text-5xl">
+    Tailwind v4.17 met cli.<br>
+  </h1>
+  <h2 class="text-2xl mt-6 p-6">
+    * Tailwind scant je classes in de html files en bouwt daar (middels de input.css) zelf de output.css van.
+    Hierdoor gebruik je alleen wat je nodig hebt. 
+    De cli zorgt voor de compilatie.
+    Het gebruik van preprocessors (b.v. sass) is daarom eigenlijk overbodig.
+  </h2>
+
+  <h3 class="text-1xl mt-6 p-6">
+    Tailwind heeft niet zoals bootstrap een componenten library. Het is meer een verzameling van "utilities" die samen de opmaak
+    verzorgen. Er bestaan wel component libraries voor. (bijvoorbeeld: https://www.material-tailwind.com/)
+  </h3>
+
+  <div class="text-1xl mt-6 p-6">het cli command voor deze versie:</div>
+  <div class="cmd">
+      $ npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+  </div>
+  
+  <a class="hover:underline !block bg-red-300 hover:bg-green-400 m-6 p-6" href="https://tailwindcss.com/docs/installation/tailwind-cli">meer info over cli hier</a>
+  <a class="hover:underline !block bg-orange-300 hover:bg-green-600 m-6 p-6" href="https://v3.tailwindcss.com/docs/using-with-preprocessors">info on preprocessors</a>
+  
+ 
+  <h2 class="text-2xl mt-6 p-6">
+    * Het tailwind grid. In tegenstelling tot bootstrap krijg je hier wel 4 kolommen als je bijvoorbeeld de klasse "grid-cols-4" gebruikt.
+  </h2>
+
+  <div class="text-1xl mt-6 p-6 bg-yellow-400">
+    Door bijvoorbeeld  xs: sm: md: lg: voor een klasse te plaatsen kun je aangeven voor welke "breakpoints" de stijl gaat gelden.
+  </div>
+
+  <div class="border grid sm:grid-cols-1 md:grid-cols-4 gap-4 m-6">
+    <div>a column 1</div>
+    <div>a column 2</div>
+    <div>a column 3</div>
+    <div>a column 4</div>
+    <div>a column 5</div>
+    <div>a column 6</div>
+    <div>a column 7</div>
+    <div>a column 8</div>
+  </div>
+
+  
+</body>
+</html>
