@@ -6,6 +6,7 @@
         <p>phpstorm version 2025.1.1</p>
         <h1>Opzetten omgeving</h1>
         <ul>
+            <li>ws geen rechten meer om php lokaal te draaien.</li>
             <li>contoleer waar php is geinstalleerd met <span class="cmd">$ which php</span></li>
             <li>Indien niet aanwezig: php installeren met homebrew</li>
             <li>php omgeving linken in phpstorm (settings> php > rechter panel)</li>
@@ -17,14 +18,32 @@
             <li>click "Undefined variable > options > Search for variables def outside  current file"</li>
         </ul>
 
-        <h1>Automatisch uploaden naar plesk ftp</h1>
+        <h1>PhpStorm deployment configuration</h1>
         <ul>
-            <li>tools > deployment > automatic on save</li>
-            <li>Plesk ftp user aanmaken</li>
-            <li>tools > deployment > config > connection (plesk ftp gegevens invullen> test connection)</li>
-            <li>tools > deployment > config > mappings</li>
+            <li>Eerst een ftp user aanmaken op Plesk</li>
+            <li>tools > deployment > configuration...</li>
+            <p>
+            <b>Connection:</b><br>
+            type: ftp<br>
+            host: web03.sd-lab.nl
+            Vul de ftp gegevens in die je op plesk heb aangemaakt (user & pw).<br>
+            rootpath: "/httpdocs" (map kiezen kan ook)
+            webserver: "https://[studentennummer].stu.sd-lab.nl"
+            </p>
+            <p>
+            <b>Mappings:</b><br>
+            localPath: pad naar de map op je computer. (als het goed is ingesteld bij het openen van een project map)<br>
+            deploymentPath: Het relatieve pad vanaf het server rootpath (bij connection, dus bv: /mapnaam)<br>
+            webPath: Het relatieve pad vanaf de webserver URL (zie connection, dus bv: /mapnaam)<br>
+            </p>
+            <p>
+                <i>Het uiteindelijke deploymentPath wordt in dit voorbeeld dus: "/httpdocs/mapnaam"</i><br>
+                <i>Het uiteindelijke webPath wordt in dit voorbeeld dus: "https://[studentennummer].stu.sd-lab.nl/mapnaam"</i><br>
+            </p>
+            <p>
+                Zet nu bij "tools > deployment > automatic upload" aan<br>
+                Je kunt nu de website in b.v. Chrome testen door op het browser icoontje te klikken<br>
+            </p>
         </ul>
-        <div>deployment path: 	/httpdocs/pathto/serverfolder</div>
-         <div>Web path: 	/pathto/serverfolder</div>
     </body>
 </html>
